@@ -436,18 +436,16 @@ import {
       },
 
         contractAllFilials2() {
-          let data = 'hello from front';
-
-            console.log( this.apiUrl +'/testroute');
-            axios.post(this.apiUrl +'/testroute', data, {headers: {'Access-Control-Allow-Origin': '*'}}).then(() => {
+        console.log( this.apiUrl +'/testroute');
+        axios.post(this.apiUrl + '/api' +'/testroute', {
+            data_1: 'hello from front!',
+        }
+      ).then(() => {
                 console.log('then')
-                this.$emit('reload-mis-data');
-                this.onClose();
             }).catch(() => {
                 console.log('catch')
             }).finally(() => {
                 console.log('finally')
-                this.loading = false;
             });
         },
 

@@ -18,7 +18,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('testroute', function () {
-    dd('test');
-    return view('welcome');
+Route::post('testroute', function (Request $request) {
+
+    $data = $request->get('data_1');
+
+    return response()->json([
+        'message' => $data,
+    ], 200);
 });
