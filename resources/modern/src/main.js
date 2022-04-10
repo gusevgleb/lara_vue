@@ -7,7 +7,7 @@ import VueClipboard from 'vue-clipboard2'
 Vue.config.productionTip = false
 Vue.use(VueClipboard);
 
-const host = 'http://127.0.0.1:8000';
+const host = 'http://127.0.0.1:8000/';
 Vue.mixin({
     data: () => ({
         message: {

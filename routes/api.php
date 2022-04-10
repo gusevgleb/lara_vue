@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Gift;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,11 +19,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('testroute', function (Request $request) {
+Route::post('get_gifts_list', function (Request $request) {
 
-    $data = $request->get('data_1');
+    $requestData = $request->get('data_1');
+    $response = Gift::first();
 
     return response()->json([
-        'message' => $data,
+        'front' => $requestData,
+        'result' => $response
     ], 200);
 });
