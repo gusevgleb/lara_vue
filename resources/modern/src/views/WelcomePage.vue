@@ -1,6 +1,5 @@
 <template>
     <v-app>
-
         <v-main>
             <v-container fluid className="v-container-fluid">
                 <h1>Welcome page!</h1>

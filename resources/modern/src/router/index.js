@@ -11,19 +11,6 @@ function prefix(prefix, routes) {
 }
 
 const routes = [
-  ...prefix('/public', [
-    {
-      path: '/slots',
-      name: 'VisualSlots',
-      // route level code-splitting
-      // this generates a separate chunk (visualSLots.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(
-        /* webpackChunkName: "visualSLots" */
-        '../views/VisualSlots'
-        )
-    },
-  ]),
   ...prefix('/vue', [
     {
       path: '/prices-integration-list',
